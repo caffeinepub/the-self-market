@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark gothic palette - OKLCH values */
+    --background: 8% 0.003 280;
+    --foreground: 92% 0.005 80;
+
+    --card: 7% 0.004 280;
+    --card-foreground: 92% 0.005 80;
+
+    --popover: 9% 0.003 280;
+    --popover-foreground: 92% 0.005 80;
+
+    --primary: 92% 0.005 80;
+    --primary-foreground: 7% 0.004 280;
+
+    --secondary: 18% 0.006 280;
+    --secondary-foreground: 68% 0.005 80;
+
+    --muted: 12% 0.003 280;
+    --muted-foreground: 68% 0.005 80;
+
+    --accent: 19% 0.005 280;
+    --accent-foreground: 92% 0.005 80;
+
+    --destructive: 40% 0.2 27;
+    --destructive-foreground: 92% 0.005 80;
+
+    --border: 18% 0.006 280;
+    --input: 18% 0.006 280;
+    --ring: 32% 0.01 280;
+
+    --radius: 0px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "General Sans", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(8% 0.003 280);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(28% 0.006 280);
+}
+
+/* Selection */
+::selection {
+  background: oklch(20% 0.006 280);
+  color: oklch(92% 0.005 80);
+}
